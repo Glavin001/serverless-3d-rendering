@@ -40,8 +40,11 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   await page.waitForFunction('window.status === "ready"')
 
+  await page.evaluate(() => document.body.style.background = 'transparent');
+
   const data = await page.screenshot({
-    type: 'png'
+    type: 'png',
+    omitBackground: true,
   })
 
   await browser.close()

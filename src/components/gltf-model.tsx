@@ -14,7 +14,7 @@ export default function GLTFModel(props: GLTFModelProps) {
     gltf.scene.traverse((obj: any) => {
       if (obj.isMesh) {
         obj.castShadow = obj.receiveShadow = props.shadows
-        obj.material.envMapIntensity = 0.8
+        // obj.material.envMapIntensity = 0.8
       }
     })
   }, [gltf.scene, props.shadows])
