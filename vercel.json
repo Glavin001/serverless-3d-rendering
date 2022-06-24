@@ -1,6 +1,10 @@
 {
     "functions": {
-      "api/render.ts": {
+      "src/pages/api/render.ts": {
+        "maxDuration": 10,
+        "memory": 1024
+      },
+      "src/pages/api/model.png.ts": {
         "maxDuration": 10,
         "memory": 1024
       }
